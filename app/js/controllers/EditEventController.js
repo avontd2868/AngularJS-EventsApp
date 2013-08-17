@@ -4,6 +4,7 @@ eventsApp.controller('EditEventController',
 
 	function EditEventController($scope) {
 		$scope.snippet = '<span style="color:red">hi there</span>';
+
 		
 
 		$scope.saveEvent= function(event, newEventForm) {

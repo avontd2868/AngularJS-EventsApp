@@ -7,3 +7,10 @@ var eventsApp = angular.module('eventsApp', ['ngSanitize','ngResource', 'ngCooki
 eventsApp.factory('myCache', function($cacheFactory) {
 	return $cacheFactory('myCache', {capacity:3});
 });
+eventsApp.config(function($routeProvider){
+	$routeProvider.when('/NewEvent',
+		{
+			templateUrl:'templates/NewEvent.html',
+			controller: 'EditEventController'
+		})
+});

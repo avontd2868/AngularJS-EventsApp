@@ -5,10 +5,13 @@ eventsApp.controller('EventController',
 	function EventController($scope, eventData) {
 		
 		$scope.snippet = '<span style="color:red">hi there</span>';
-		$scope.boolValue = false;
+		$scope.boolValue = true;
 		$scope.mystyle = {color:'red'};
 		$scope.sortorder = 'name';
-		$scope.event = eventData.event;
+		
+		eventData.getEvent(function(event){
+			$scope.event = event;
+		});
 
 
 		$scope.upVoteSession=function(session){
